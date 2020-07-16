@@ -1,0 +1,49 @@
+xss csrf
+
+浏览器搜索过程
+
+http相关等 缓存机制  cache-control  
+
+splice sort psh pop shift unshift reverse   concat不改变
+
+闭包 垃圾回收 机制
+
+let const   script
+
+nginx 
+
+原生请求xmlhttprequest
+
+canvas图片压缩
+
+vue原理  dep vdom reactive() 
+
+
+es6   新的部分
+
+动态生成路由
+
+qiankun
+
+keepalive
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
