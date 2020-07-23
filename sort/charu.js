@@ -2,11 +2,10 @@
  * @Description:
  * @Author: Fearyao
  * @Date: 2020-07-08 11:03:00
- * @LastEditTime: 2020-07-16 11:52:05
+ * @LastEditTime: 2020-07-23 11:36:47
  * @LastEditors: Fearyao
  */
 
-const { log } = require("console")
 
 const charu = (arr) => {
   for (let i = 1; i < arr.length; i++) {

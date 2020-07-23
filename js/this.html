@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let o1 = {
+      s: 'o1'
+    }
+    var o2 = {
+      s: 'o2'
+    }
+
+    var s = 'window'
+
+    function nomal() {
+      console.log(this.s)
+    }
+    nomal.call(o2)
+
+    function unnomal() {
+      nomal()
+    }
+    unnomal.call(o1)
+
+    console.log(o1)
+  </script>
+</body>
+
+</html>
