@@ -1,12 +1,20 @@
-/*
- * @Description:
- * @Author: Fearyao
- * @Date: 2020-07-23 15:44:56
- * @LastEditTime: 2020-07-23 15:46:32
- * @LastEditors: Fearyao
- */
+let o1 = {
+  s: 'o1'
+}
+var o2 = {
+  s: 'o2'
+}
 
+var s = 'window'
 
-var a = 1
+function nomal() {
+  console.log(this.s)
+}
+nomal.call(o2)
 
-console.log(global)
+function unnomal() {
+  nomal()
+}
+unnomal.call(o1)
+
+// console.log(o1)
