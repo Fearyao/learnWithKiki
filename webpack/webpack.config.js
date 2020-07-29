@@ -2,18 +2,49 @@
  * @Description: 
  * @Author: Fearyao
  * @Date: 2020-07-27 15:35:57
- * @LastEditTime: 2020-07-27 16:09:47
+ * @LastEditTime: 2020-07-29 10:06:34
  * @LastEditors: Fearyao
- */ 
+ */
 const path = require('path')
-const {resolve} = path
+
+const Uglify = require('uglifyjs-webpack-plugin')
+const {
+  resolve
+} = path
 module.exports = {
-  entry:'./index.js',
-  output:{
-    filename:'bundle.js',
-    path:resolve(__dirname,'dist')
+  entry: './index.js',
+  output: {
+    filename: 'bundle.js',
+    path: resolve(__dirname, 'dist')
   },
-  rules:[],
-  plugins:[],
-  mode:'develop'
+  devServer: {
+    contentBase: './dist'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(scss|sass)$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8196
+          }
+        }
+        ]
+      },
+    ],
+
+  },
+  plugins: [
+    new Uglify()
+  ],
+  mode: 'development',
 }
